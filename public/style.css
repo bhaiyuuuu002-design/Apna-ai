@@ -1,0 +1,22 @@
+    background: rgba(0,0,0,.7);
+    backdrop-filter: blur(3px);
+    z-index: 90;
+  }
+
+  .mobile-close,
+  .hamburger-btn {
+    display: flex;
+  }
+
+  .welcome-screen {
+    margin-top: 60px;
+  }
+
+  .welcome-screen h1 {
+    font-size: 25px;
+  }
+
+  .message .bubble {
+    max-width: 90%;
+  }
+}
