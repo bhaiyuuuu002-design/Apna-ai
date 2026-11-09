@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APNA AI</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div class="app-layout">
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="brand">
+          <span class="brand-text">APNA <span>AI</span></span>
+        </div>
+        <button class="icon-btn mobile-close" id="closeSidebarBtn">
+          ×
+        </button>
+      </div>
+
+      <button class="new-chat-btn" id="newChatBtn">
+        + New Chat
+      </button>
+
+      <div class="history-section">
+        <div class="history-title">Recent Chats</div>
+        <ul class="history-list" id="historyList"></ul>
+      </div>
+
+      <div class="sidebar-footer">
+        <button class="clear-all-btn" id="clearAllBtn">
+          Clear All History
+        </button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="top-nav">
+        <button class="icon-btn hamburger-btn" id="openSidebarBtn">☰</button>
+        <div class="chat-status">
+          <span class="status-indicator"></span>
+          <span class="chat-model-label">APNA AI</span>
+        </div>
+        <button class="icon-btn" id="clearCurrentBtn">↻</button>
+      </header>
+
+      <section class="chat-container" id="chatContainer">
+        <div class="welcome-screen" id="welcomeScreen">
+          <div class="welcome-icon">✦</div>
+          <h1>Welcome to <span class="glow-text">APNA AI</span></h1>
+          <p>Your personal AI assistant.</p>
+
+          <div class="prompt-grid">
+            <button class="prompt-chip" data-text="Hello APNA AI!">
+              👋 Say Hello
+            </button>
+            <button class="prompt-chip" data-text="Give me some creative ideas.">
+              💡 Creative Ideas
+            </button>
+            <button class="prompt-chip" data-text="Help me learn coding.">
+              💻 Learn Coding
+            </button>
+          </div>
+        </div>
+
+        <div class="messages-list" id="messagesList"></div>
+
+        <div class="message ai-message typing-indicator" id="typingIndicator">
+          <div class="avatar">AI</div>
+          <div class="bubble">Thinking...</div>
+        </div>
+      </section>
+
+      <footer class="input-area">
+        <form class="input-form" id="chatForm">
+          <textarea id="messageInput"
+            placeholder="Ask APNA AI anything..."
+            rows="1" required></textarea>
+          <button type="submit" id="sendBtn" class="send-btn">
+            ↑
+          </button>
+        </form>
+        <div class="disclaimer">
+          APNA AI can make mistakes. Verify important information.
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
